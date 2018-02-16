@@ -4,7 +4,24 @@ var HomePage = {
   template: "#home-page",
   data: function() {
     return {
-      message: "Hello World"
+      message: "Hello World",
+      reviews: [
+        {
+          text: "Vue.js is the best thing since sliced bread!",
+          rating: 5,
+          reviewer: "Dani"
+        },
+        {
+          text: "I love Vue.js for programming!",
+          rating: 4,
+          reviewer: "Jaron"
+        },
+        {
+          text: "Vue.js is dope.",
+          rating: 5,
+          reviewer: "Nadine"
+        }
+      ]
     };
   },
   created: function() {},

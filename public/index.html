@@ -23,5 +23,7 @@
     <h2>{{ message }}</h2>
     <input v-model="message">
 
+    <li v-for="review in reviews">{{ review.rating }} STARS - {{ review.reviewer }}: {{ review.text }}</li>
+
   </div>
 </template>
