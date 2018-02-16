@@ -23,7 +23,7 @@
     <h2>{{ message }}</h2>
     <input v-model="message">
 
-    <li v-for="review in reviews">{{ review.rating }} STARS - {{ review.reviewer }}: {{ review.text }}</li>
+    <li v-for="review in reviews" v-on:click="deleteReview(review)" v-if="isPositive(review)">{{ review.rating }} STARS - {{ review.reviewer }}: {{ review.text }}</li>
     
     Review: <input v-model="newReview.text">
     Rating: <input v-model="newReview.rating">
@@ -32,3 +32,23 @@
 
   </div>
 </template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

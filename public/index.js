@@ -12,7 +12,7 @@ var HomePage = {
           reviewer: "Dani"
         },
         {
-          text: "I love Vue.js for programming!",
+          text: "Vue.js is great!",
           rating: 4,
           reviewer: "Jaron"
         },
@@ -28,7 +28,19 @@ var HomePage = {
   created: function() {},
   methods: {
     addReview: function() {
-      this.reviews.push(this.newReview);
+      if(this.newReview.text && this.newReview.rating && this.newReview.reviewer) {
+        this.reviews.push(this.newReview);
+        this.newReview = {text: "", rating: "", reviewer: ""};
+      }
+    },
+    deleteReview: function(reviewObject) {
+      var index = this.reviews.indexOf(reviewObject);
+      this.reviews.splice(index, 1);
+    },
+    isPositive: function(reviewObject){
+      // if it finds the index of the word bad, returns index. if bad is not in the string, returns -1
+      console.log(reviewObject.text.indexOf('bad'))
+      return reviewObject.text.indexOf('bad') === -1
     }
   },
   computed: {}
