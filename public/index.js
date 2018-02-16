@@ -21,11 +21,16 @@ var HomePage = {
           rating: 5,
           reviewer: "Nadine"
         }
-      ]
+      ],
+      newReview: {text: "", rating: "", reviewer: ""}
     };
   },
   created: function() {},
-  methods: {},
+  methods: {
+    addReview: function() {
+      this.reviews.push(this.newReview);
+    }
+  },
   computed: {}
 };
 

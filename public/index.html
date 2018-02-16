@@ -24,6 +24,11 @@
     <input v-model="message">
 
     <li v-for="review in reviews">{{ review.rating }} STARS - {{ review.reviewer }}: {{ review.text }}</li>
+    
+    Review: <input v-model="newReview.text">
+    Rating: <input v-model="newReview.rating">
+    Your Name: <input v-model="newReview.reviewer">
+    <button v-on:click="addReview()">Add Review</button>
 
   </div>
 </template>
